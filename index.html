@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <script src="jquery-3.1.1.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <title>Annie</title>
+</head>
+<body>
+  <script>
+
+  $(document).ready(function() {
+
+    if(localStorage.getItem('popState') != 'shown'){
+          $("#popup").delay(1000).fadeIn(1000);
+          localStorage.setItem('popState','shown')
+      }
+
+        $('#popup').click(function(e)
+        {
+        $('#popup').fadeOut(1000);
+        $("#four0four").fadeIn(1000);
+        });
+
+    });
+  </script>
+<div style="display:none" id="popup"><img src="background.jpg" /></div>
+<div style="display:none" id="four0four">
+  <h1> HTTP Error 404</h1>
+  <h2> 404 not found</h2>
+  <p>The Web server cannot find the file or script you asked for.</p>
+  <p>Please cheack the URL to ensure that the path is correct.</p>
+  <p>Please contact the server's administrator if this problem persists.</p>
+</div>
+
+</body>
+</html>
